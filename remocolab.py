@@ -110,12 +110,12 @@ def _setupSSHDImpl(ngrok_token, ngrok_region):
   port = m.group(2)
 
   ssh_common_options =  "-o UserKnownHostsFile=/dev/null -o VisualHostKey=yes"
-  print("Command to connect to the ssh server:")
+  print("Command to connect to the ssh server (To Connect to the terminal) :")
   print("‾"*37)
   print(f"ssh {ssh_common_options} -p {port} {user_name}@{hostname}")
   print("_"*113)
   print("‾"*113)
-  print("If you use VNC:")
+  print("If you use VNC (For Connecting the Machine GUI):")
   print("‾"*15)
   print(f"ssh {ssh_common_options} -L 5901:localhost:5901 -p {port} {user_name}@{hostname}")
   print("_"*113)
